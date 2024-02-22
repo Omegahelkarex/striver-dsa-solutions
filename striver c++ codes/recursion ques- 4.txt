@@ -1,0 +1,30 @@
+// sum of n numbers 
+
+
+
+
+#include<bits/stdc++.h>
+using namespace std ;
+
+
+void p(int n, int s ){
+    if(n==0){
+        cout<<s;
+        return ;
+    }
+    p(n-1,s+n);
+}
+
+
+
+
+
+
+
+
+int main(){
+    int n;
+    cout<<"Enter the sum upto which we have to add";
+    cin>>n;
+    p(n,0);
+}

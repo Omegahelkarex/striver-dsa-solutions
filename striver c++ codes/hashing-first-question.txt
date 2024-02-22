@@ -1,0 +1,36 @@
+//for example the array have the maximum of 12 number elements so in this code we will find the frequency of the elemst given by the user 
+
+
+
+#include<bits/stdc++.h>
+using namespace std ;
+
+int main (){
+    int n ;
+    cout<<"enter the numbers of elments";
+    cin>>n;
+    int arr[n];
+    cout<<"enter the elements of array";
+    for(int i = 0; i<n ; i++){
+        cin>>arr[i];
+    }
+    // precompute 
+    int hash[13] = {0};
+    for(int i = 0 ; i<n ; i++){
+        hash[arr[i]] += 1; 
+    }
+    
+    // fetching 
+      int q ;
+      cout<<"the numbers elements to be found ";
+      cin>>q;
+      while(q--){
+          int na;
+          cout<<"the number whose frequency has to be found ";
+          cin>>na;
+          cout<<"the frequency is ";
+          cout<<hash[na]<<endl;
+          
+      }
+      return 0 ;
+}

@@ -1,0 +1,28 @@
+// print names n times using recursionn
+
+#include<bits/stdc++.h>
+using namespace std ;
+
+
+void p(int i, int n){
+    if(i>n){
+        return;
+    }
+    cout<<"Piyush";
+    p(i+1, n);
+   
+}
+
+
+
+
+
+
+int main(){
+    int n ;
+    cout<<"enter the no of times to be print";
+    cin>>n;
+    p(1, n);
+    return 0 ; 
+    
+}

@@ -1,0 +1,42 @@
+//finding frequency of a character in a string if the string contains lowercase 
+
+
+
+
+
+
+#include<bits/stdc++.h>
+using namespace std ; 
+
+
+int main(){
+    string s ;
+    cout<<"enter the string";
+    cin>>s;
+    
+    
+    
+    
+    // pre-compute 
+    
+    int hash[26] = {0};
+    for(int i  = 0 ; i < s.size(); i++){
+        hash[s[i]-'a']++ ; 
+    }
+    
+    fre
+    // fetching 
+    
+    int q ; 
+    cout<<"enter the no of alpahabets to be found ";
+    cin>>q;
+    cout<<"enter the alphabets one by one ";
+    while(q--){
+        char c ; 
+        cin>>c  ; 
+        cout<<hash[c - 'a']<<endl ; 
+        
+        
+    }
+    return  0 ;
+}

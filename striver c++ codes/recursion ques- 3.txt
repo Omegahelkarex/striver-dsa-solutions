@@ -1,0 +1,24 @@
+// printing n to 1 using recursion 
+
+#include<bits/stdc++.h>
+using namespace std ; 
+
+void p(int n){
+    if(n==0){
+        return;
+    }
+    cout<<n;
+    p(n-1);
+}
+
+
+
+
+
+
+int main (){
+    int n ;
+    cout<<"enter the upto which we have to print";
+    cin>>n;
+    p(n);
+}
