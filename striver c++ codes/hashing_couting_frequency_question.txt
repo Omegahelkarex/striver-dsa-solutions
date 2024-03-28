@@ -1,0 +1,59 @@
+#include<bits/stdc++.h>
+using namespace std ; 
+
+
+void cf(int arr[], int n ){
+    vector<bool> v(n, false);
+    
+    for (int i = 0 ; i < n ; i++){
+        if(v[i]== true)
+            continue ; 
+        
+        int c  = 1 ;
+        for(int j = i+1; j<n;j++){
+            if(arr[i]==arr[j]){
+                v[j]=true;
+                c++;
+            }
+        }
+        cout<<arr[i]<<" has appeared "<<c<<endl;
+    }
+}
+
+
+
+
+
+
+int main(){
+    int n  ; 
+    cout<<"enter the number of elements";
+    cin>>n;
+    int arr[n];
+    cout<<"enter the elements of array";
+    for(int i =0 ; i < n; i++){
+        cin>>arr[i];
+    }
+    cf(arr,n);
+    
+    return 0 ;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}

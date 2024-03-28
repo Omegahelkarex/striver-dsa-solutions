@@ -1,0 +1,54 @@
+#include<bits/stdc++.h>
+using namespace std ; 
+
+
+void cf(int arr[], int n){
+    int maxf = 0, maxe = 0;
+    int minf = n, mine = 0 ;
+    
+    vector<bool> v(n,false);
+    
+    for(int i = 0 ; i < n ;i++){
+        
+        if(v[i] == true)
+        continue ;
+        
+        int c = 1 ;
+        for(int j = i+1;j < n ; j++){
+            if(arr[i] == arr[j]){
+                v[j] = true;
+                c++;
+            }
+        }
+        
+        if(c>maxf){
+            maxf = c ;
+            maxe = arr[i];
+        }
+        
+        if(c < minf){
+            minf = c ;
+            mine = arr[i];
+        }
+        
+    }
+    cout<<maxe<<" has appeared "<<maxf<<endl;
+    cout<<mine<<" has appeared "<<minf<<endl;
+}
+
+
+
+int main(){
+    int n ;  
+    cout<<"enter the number of elements ";
+    cin>>n ; 
+    int arr[n];
+    cout<<"enter the elements of the array";
+    for(int i = 0 ; i < n ; i++){
+        cin>>arr[i];
+    }
+    cf(arr, n );
+    return 0;
+    
+    
+}

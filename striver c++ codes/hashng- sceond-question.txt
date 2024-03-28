@@ -24,7 +24,7 @@ int main(){
         hash[s[i]-'a']++ ; 
     }
     
-    
+    fre
     // fetching 
     
     int q ; 

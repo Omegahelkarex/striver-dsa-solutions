@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std ; 
+
+void cf(int arr[], int n){
+    
+    unordered_map<int,int> mpp;
+    
+    for(int i =0 ; i < n ; i ++ ){
+        mpp[arr[i]]++;
+    }
+    
+    for(auto x : mpp){
+        cout<<x.first<<" has appeared "<<x.second<<endl;
+    }
+}
+
+int main(){
+    int n ;
+    cout<<"enter the no of elements";
+    cin>>n;
+    int arr[n];
+    cout<<"enter the elements of the array ";
+    for(int i = 0 ; i<n;i++){
+        cin>>arr[i];
+    }
+    cf(arr, n);
+    return  0 ;
+}
