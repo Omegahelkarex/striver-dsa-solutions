@@ -1,0 +1,36 @@
+// to find the frequency of a character in a given string m
+
+
+
+
+
+
+#include<bits/stdc++.h>
+using namespace std  ; 
+
+int main(){
+    string s ; 
+    cout<<"enter the string ";
+    getline(cin, s);
+    
+    // pre-compute 
+     int hash[256] = {0} ;
+    for(int i = 0 ; i < s.size(); i++){
+        hash[s[i]]++ ; 
+        
+    }
+    
+    int q ;
+    cout<<"enter the number of characters to be find";
+    cin>>q ;
+    cout<<"enter the characters to be found ";
+    while(q--){
+        char c ; 
+        cin>>c;
+        cout<<hash[c]<<endl;
+        
+    }
+    return 0 ; 
+}
+
+
